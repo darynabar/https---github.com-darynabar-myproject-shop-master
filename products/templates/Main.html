@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Готель «Гортензія»</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #66978f;
+            color: #49706a;
+        }
+        .header {
+            background-color: #66978f;
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .header h1 {
+            margin: 0;
+            color: #55436e; 
+        }
+        .banner {
+            background: url('https://source.unsplash.com/1600x900/?hotel,luxury') no-repeat center center/cover;
+            height: 7vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+        }
+        .banner h2 {
+            font-size: 50px;
+            background: #B2D8C6;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 50px 0;
+        }
+        .rooms {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .room {
+            width: 52%;
+            margin: 20px;
+            padding: 20px;
+            background: #466661;
+            border-radius: 10px;
+            text-align: center;
+            color: aliceblue;
+        }
+        .room img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .footer {
+            background-color: #5f8b84;
+            padding: 20px;
+            text-align: center;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #C19A6B;
+            color: #5f8b84;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color:#2f4744;
+        }
+
+       
+        .timer-container {
+            background-color: white;
+            padding: 15px;
+            display: inline-block;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: fixed; 
+            top: 10px; 
+            right: 10px; 
+            z-index: 1000; 
+        }
+        #timer {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d9534f;
+        }
+        .offer {
+            margin-top: 20px;
+        }
+        .offer h2 {
+            color: #333;
+        }
+        .offer p {
+            font-size: 18px;
+        }
+
+        .advantages {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 30px;
+        }
+        .advantage {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 250px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .advantage:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .advantage i {
+            font-size: 40px;
+            color: #FF6F61;
+            margin-bottom: 15px;
+            transition: color 0.3s ease;
+        }
+        .advantage:hover i {
+            color: #FF3E1D;
+        }
+        .advantage h3 {
+            color: #333;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .advantage p {
+            color: #686868;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="https://budport.com.ua/assets/upload/userfiles/Olga/grand_hotel.jpg" alt="Leopolis" style="width: 100%; height: 900px; object-fit: cover;">
+
+
+<div class="container">
+    <h2 style="color:#2f4744">Переваги нашого готелю</h2>
+    <div class="advantages">
+        <div class="advantage">
+            <i class="fas fa-map-marker-alt"></i>
+            <div style="font-size: 26px;"><img src="https://cdn-icons-png.flaticon.com/128/90/90549.png" alt="іконка" width="27"> Зручне розташування</div>
+            <p>Готель знаходиться в центрі міста, поруч з основними визначними місцями.</p>
+        </div>
+        <div class="advantage">
+            <i class="fas fa-building"></i>
+            <div style="font-size: 26px;"><img src="https://cdn-icons-png.flaticon.com/128/2992/2992259.png" alt="іконка" width="27"> Сучасний дизайн</div>
+            <p>Наш готель поєднує комфорт і стильний сучасний дизайн для вашого зручності.</p>
+        </div>
+        <div class="advantage">
+            <i class="fas fa-wifi"></i>
+            <div style="font-size: 26px;"><img src="https://cdn-icons-png.flaticon.com/128/4564/4564804.png" alt="іконка" width="27"> Безкоштовний  Wi-Fi</div>
+            <p>Залишайтеся на зв'язку з безкоштовним високошвидкісним інтернетом у кожному номері.</p>
+        </div>
+        <div class="advantage">
+            <i class="fas fa-bed"></i>
+            <div style="font-size: 26px;"><img src="https://cdn-icons-png.flaticon.com/128/5140/5140130.png" alt="іконка" width="27"> Комфортні ліжка</div>
+            <p>Пориньте в сон на наших розкішних ліжках для найкращого відпочинку.</p>
+        </div>
+        <div class="advantage">
+            <i class="fas fa-utensils"></i>
+            <div style="font-size: 26px;"><img src="https://cdn-icons-png.flaticon.com/128/6309/6309056.png" alt="іконка" width="27"> Смачна кухня</div>
+            <p>Насолоджуйтесь смачними стравами, приготованими з найкращих інгредієнтів.</p>
+        </div>
+        <div class="advantage">
+            <i class="fas fa-spa"></i>
+            <div style="font-size: 26px;"><img src="https://cdn-icons-png.flaticon.com/128/2890/2890557.png" alt="іконка" width="28"> SPA</div>
+            <p>Розслабтесь у нашому розкішному SPA-центрі для повного відновлення.</p>
+        </div>
+        <div class="advantage">
+            <i class="fas fa-wardrobe"></i>
+            <div style="font-size: 26px;"><img src="https://cdn-icons-png.flaticon.com/128/2789/2789678.png" alt="іконка" width="25"> Гардероб</div>
+            <p>Залишайте ваші речі в безпеці у нашому просторому гардеробі.</p>
+        </div>
+        <div class="advantage">
+            <i class="fas fa-cogs"></i>
+            <div style="font-size: 26px;"><img src="https://cdn-icons-png.flaticon.com/128/8495/8495879.png" alt="іконка" width="28"> Косметичні засоби</div>
+            <p>Всі необхідні косметичні засоби для вашого комфорту та догляду.</p>
+        </div>
+        <div class="advantage">
+            <i class="fas fa-tint"></i>
+            <div style="font-size: 26px;"><img  src="https://cdn-icons-png.flaticon.com/128/677/677549.png" alt="іконка" width="28"> Міні-бар</div>
+            <p>Насолоджуйтесь напоями та закусками з міні-бару прямо в номері.</p>
+        </div>
+    </div>
+</div>
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+    <div class="header">
+        <h1>Готель «Гортензія»</h1>
+    </div>
+
+    <div class="banner">
+        <h2>Розкішні номери для найвибагливіших гостей</h2>
+    </div>
+
+    <div class="container">
+        <h2 style="text-align: center; color:#2f4744;">Наші номери</h2>
+        <div class="rooms">
+            <div class="room">
+                <img src="https://mirt.ua/uploads/big/nomer-v-otele-diplomat.jpeg" alt="Номер Люкс">
+                <h3>Номер Люкс</h3>
+                <p>Просторий номер з панорамним видом і ексклюзивним дизайном.</p>
+                <a href="#" class="btn">Детальніше</a>
+            </div>
+            <div class="room">
+                <img src="https://romantikspahotels.ua/wp-content/uploads/2020/11/125203017_3495360903833176_5473777613084553473_o.jpg" alt="Сімейний номер">
+                <h3>Сімейний номер</h3>
+                <p>Ідеальне рішення для відпочинку з родиною у комфорті.</p>
+                <a href="#" class="btn">Детальніше</a>
+            </div>
+
+            <div class="room">
+                <img src="https://www.hotel-praha.com.ua/wp-content/uploads/2019/02/praha-junior-suite-1.jpg" alt="Напівлюкс">
+                <h3>Напівлюкс</h3>
+                <p>Ідеальне рішення для відпочинку з родиною у комфорті.</p>
+                <a href="#" class="btn">Детальніше</a>
+            </div>
+
+            <div class="room">
+                <img src="https://www.hotel-khreschatyk.kiev.ua/assets/components/phpthumbof/cache/hotel-khreschatyk-guest-room-double-twin-prestige-001.416a98daf55fdef516c62f8a8fe8467455.jpg" alt="Комфорт">
+                <h3>Комфорт</h3>
+                <p>Чудове рішення для затишного відпочинку.</p>
+                <a href="#" class="btn">Детальніше</a>
+            </div>
+
+
+            <div class="room">
+                <img src="https://centralhotel.od.ua/storage/app/uploads/public/5f2/281/117/5f2281117580e571835980.jpg" alt="Стандарт">
+                <h3>Стандарт</h3>
+                <p>Проведи свій день в комфорті.</p>
+                <a href="#" class="btn">Детальніше</a>
+            </div>
+            <div class="room">
+                <img src="https://clubsv.com/wp-content/uploads/2020/03/nomer-lux-gotel-hmelnickij-sv-klub-svobody-1a-50.jpg" alt="Економ">
+                <h3>Економ</h3>
+                <p>Зручний та затишний номер саме для вас.</p>
+                <a href="#" class="btn">Детальніше</a>
+            </div>
+
+            <div class="room">
+                <img src="https://www.nadiyahotel.com/images/rooms/luks-350.jpg" alt="Сімейний номер">
+                <h3>Сімейний номер</h3>
+                <p>Ідеальне рішення для відпочинку з родиною у комфорті.</p>
+                <a href="#" class="btn">Детальніше</a>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="timer-container">
+        <h3>До завершення акції:</h3>
+        <h2>Акційні номери готелю!</h2>
+        <p>Встигніть забронювати до закінчення акції:</p>
+        <div id="timer">00:00:00</div>
+        <div class="offer">
+            <h2>-20% на всі люксові номери!</h2>
+            <p>Акція діє до завершення таймера.</p>
+        <div id="timer">00:00:00</div>
+    </div>
+
+    <script>
+        function startCountdown(hours) {
+            let endTime = localStorage.getItem("endTime");
+            
+            if (!endTime || new Date().getTime() > endTime) {
+                endTime = new Date().getTime() + hours * 60 * 60 * 1000;
+                localStorage.setItem("endTime", endTime);
+            }
+
+            function updateTimer() {
+                let now = new Date().getTime();
+                let distance = endTime - now;
+
+                if (distance > 0) {
+                    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    document.getElementById("timer").innerHTML = 
+                        (hours < 10 ? "0" : "") + hours + ":" +
+                        (minutes < 10 ? "0" : "") + minutes + ":" +
+                        (seconds < 10 ? "0" : "") + seconds;
+                } else {
+                    document.getElementById("timer").innerHTML = "Акція завершена!";
+                }
+            }
+
+            updateTimer();
+            setInterval(updateTimer, 1000);
+        }
+
+        startCountdown(3); // 3 години
+    </script>
+
+</body>
+</html>

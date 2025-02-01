@@ -1,0 +1,7 @@
+.product-table .product-image {
+    transition: transform 0.2s;
+}
+
+.product-table .product-image:hover {
+    transform: scale(3);
+}
